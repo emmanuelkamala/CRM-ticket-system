@@ -1,6 +1,7 @@
 import './App.css';
 import DefaultLayout from './layout/DefaultLayout';
-import Dashboard from './pages/dashboard/Dashboard';
+import AddTicket from './pages/add-ticket/AddTicket';
+//import Dashboard from './pages/dashboard/Dashboard';
 // import Login from './pages/login/Login';
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       <DefaultLayout>
-        <Dashboard />
+        {/* <Dashboard /> */}
+        <AddTicket />
       </DefaultLayout>
     </div>
   );
