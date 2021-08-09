@@ -1,10 +1,12 @@
 import './App.css';
-import Login from './pages/login/Login';
+import DefaultLayout from './layout/DefaultLayout';
+// import Login from './pages/login/Login';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      {/* <Login /> */}
+      <DefaultLayout />
     </div>
   );
 }
