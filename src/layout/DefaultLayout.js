@@ -4,9 +4,16 @@ import Header from './partials/Header'
 
 function DefaultLayout() {
   return (
-    <div>
-      <Header />
-      <Footer />
+    <div className='default-layout'>
+      <header className='Header'>
+        <Header />
+      </header>
+      <main className='main'>
+
+      </main>
+      <footer className='footer'>
+        <Footer />
+      </footer>
     </div>
   )
 }

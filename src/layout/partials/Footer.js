@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div>
-      This is footer
+    <div className='text-center copyright'>
+     &copy; All Rights Reserved 2021
     </div>
   )
 }
