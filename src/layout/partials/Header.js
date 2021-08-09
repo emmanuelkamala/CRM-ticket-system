@@ -4,7 +4,7 @@ import logo from '../../assets/images/crm-logo.png';
 
 function Header() {
   return (
-    <Navbar collapseOnSelect variant='dark' bg='info' expand='md'>
+    <Navbar collapseOnSelect variant='dark' bg='success' expand='md'>
       <Navbar.Brand>
         <img src={logo} alt='my logo' width='50px' />
       </Navbar.Brand>
