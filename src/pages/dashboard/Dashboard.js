@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import TicketTable from '../../components/ticket-table/TicketTable';
+import tickets from '../../assets/data/dummy-tickets.json';
 
 function Dashboard() {
   return (
     <Container>
       <Row>
         <Col className='text-center mt-5 mb-2'>
-          <Button variant='success' style={{ 'font-size': '2rem', padding: '10px 20px', color: 'white'}}>Add New Ticket</Button>
+          <Button variant='success' style={{ fontSize: '2rem', padding: '10px 20px', color: 'white'}}>Add New Ticket</Button>
         </Col>
       </Row>
       <Row>
@@ -25,7 +26,7 @@ function Dashboard() {
       <hr />
       <Row>
         <Col className='recent-ticket'>
-          <TicketTable />
+          <TicketTable tickets={tickets} />
          
         </Col>
       </Row>

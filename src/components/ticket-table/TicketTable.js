@@ -1,7 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-function TicketTable() {
+function TicketTable({tickets}) {
   return (
     <Table striped bordered hover>
       <thead>
@@ -13,12 +13,22 @@ function TicketTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Email issue</td>
-          <td>Client response pending</td>
-          <td>2021-08-08</td>
-        </tr>
+        {
+          tickets.length ?  (tickets.map((row, i) => 
+            <tr key={i}>
+              <td>{row.id}</td>
+              <td>{row.subject}</td>
+              <td>{row.status}</td>
+              <td>{row.addedAt}</td>
+            </tr>
+          )) : 
+          (
+            <tr>
+              <td colSpan='4' className='text-center'>No ticket(s) available</td>
+            </tr>
+          )
+        }
+        
       </tbody>
     </Table>
   )
