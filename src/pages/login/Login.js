@@ -28,6 +28,13 @@ const Login = () => {
     console.log(email, password);
   }
 
+  const handleResetSubmit = e => {
+    e.preventDefault()
+
+    console.log(email);
+  }
+
+
   const formSwitcher = formType => {
     setFormLoad(formType)
   }
@@ -52,7 +59,7 @@ const Login = () => {
             <PasswordReset
               handleChange={handleChange} 
               email = {email}
-              handleSubmit = {handleSubmit}
+              handleResetSubmit = {handleResetSubmit}
               formSwitcher = {formSwitcher}
             />
           )

@@ -2,14 +2,14 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-const PasswordReset = ({handleChange, email, handleSubmit, formSwitcher }) => {
+const PasswordReset = ({handleChange, email, handleResetSubmit, formSwitcher }) => {
   return (
     <Container>
       <Row>
         <Col>
           <h1 className='text-info text-center mt-5'>Reset Password</h1>
           <hr/>
-          <Form className="p-3" autoComplete="off" onSubmit={handleSubmit}>
+          <Form className="p-3" autoComplete="off" onSubmit={handleResetSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control 
@@ -23,7 +23,7 @@ const PasswordReset = ({handleChange, email, handleSubmit, formSwitcher }) => {
             </Form.Group>
 
             <Button variant="primary" type="submit">
-              Login
+              Reset Password
             </Button>
           </Form>
           <hr/>
@@ -41,7 +41,7 @@ const PasswordReset = ({handleChange, email, handleSubmit, formSwitcher }) => {
 
 PasswordReset.propTypes = {
   handleChange: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+  handleResetSubmit: PropTypes.func.isRequired,
   formSwitcher: PropTypes.func.isRequired,
   email: PropTypes.string.isRequired,
 }
