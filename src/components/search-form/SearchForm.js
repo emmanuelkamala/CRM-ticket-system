@@ -3,14 +3,13 @@ import { Form, Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 function SearchForm({handleChange, str}) {
-  console.log(str);
   return (
     <div>
       <Form.Group as={Row}>
-        <Form.Label column sm='2'>
+        <Form.Label column sm='1'>
           Search: {' '}
         </Form.Label>
-        <Col sm='9'>
+        <Col sm='11'>
           <Form.Control 
             type='text'
             value={str}
