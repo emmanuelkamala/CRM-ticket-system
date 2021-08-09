@@ -8,7 +8,7 @@ function DefaultLayout({children}) {
       <header className='Header'>
         <Header />
       </header>
-      <main className='main'>
+      <main className='main mt-3'>
         {children}
       </main>
       <footer className='footer'>
