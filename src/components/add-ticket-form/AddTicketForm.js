@@ -5,7 +5,9 @@ import './add-ticket-form.css';
 function AddTicketForm({handleSubmit, handleChange, formData }) {
   console.log(formData);
   return (
-    <Card className='mt-5 add-ticket-form'>
+    <Card className='mt-5 mb-10 add-ticket-form'>
+      <h1 className='text-success text-center mt-3'>Add New Ticket</h1>
+      <hr />
       <Form className="p-3" autoComplete="off" onSubmit={handleSubmit}>
             <Form.Group as={Row} className="mb-3" controlId="formBasicEmail">
               <Form.Label column sm={3}>Subject</Form.Label>
@@ -13,6 +15,7 @@ function AddTicketForm({handleSubmit, handleChange, formData }) {
                 <Form.Control 
                   type="type" 
                   name="subject"
+                  minLength="6"
                   placeholder="Enter your subject" 
                   value={formData.subject} 
                   onChange={handleChange} 
