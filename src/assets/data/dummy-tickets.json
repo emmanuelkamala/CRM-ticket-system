@@ -3,7 +3,24 @@
     "id": 1,
     "subject": "Issue with sending emails",
     "status": "Client response pending",
-    "addedAt": "2021-04-06"
+    "addedAt": "2021-04-06",
+    "history": [
+      {
+        "date": "2021-08-09",
+        "message": "Hello everyone",
+        "messageBy": "client"
+      },
+      {
+        "date": "2021-08-09",
+        "message": "reply from operator",
+        "messageBy": "operator"
+      },
+      {
+        "date": "2021-08-09",
+        "message": "Hello everyone",
+        "messageBy": "client"
+      }
+    ]
   },
   {
     "id": 2,
