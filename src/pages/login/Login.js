@@ -40,7 +40,7 @@ const Login = () => {
   }
 
   return (
-    <div className='login bg-info'>
+    <div className='login bg-success'>
       <Card className='card'>
         {
           formLoad === 'login' && (

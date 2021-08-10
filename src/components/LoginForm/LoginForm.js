@@ -7,7 +7,7 @@ const LoginForm = ({handleChange, email, password, handleSubmit, formSwitcher })
     <Container>
       <Row>
         <Col>
-          <h1 className='text-info text-center mt-5'>Client Login</h1>
+          <h1 className='text-success text-center mt-5'>Client Login</h1>
           <hr/>
           <Form className="p-3" autoComplete="off" onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -33,7 +33,7 @@ const LoginForm = ({handleChange, email, password, handleSubmit, formSwitcher })
                 required
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="success" type="submit">
               Login
             </Button>
           </Form>
@@ -42,7 +42,13 @@ const LoginForm = ({handleChange, email, password, handleSubmit, formSwitcher })
       </Row> 
       <Row className="mb-5">
         <Col>
-          <a href='#!' onClick={() => formSwitcher('reset')}>Forgot Password?</a>
+          <a 
+            href='#!' 
+            onClick={() => formSwitcher('reset')}>
+              <span className='text-success'>
+                Forgot Password?
+              </span>
+          </a>
         </Col>
       </Row>
     </Container>
