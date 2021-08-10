@@ -12,8 +12,10 @@ function Header() {
   }
   return (
     <Navbar collapseOnSelect variant='dark' bg='success' expand='md' >
-      <Navbar.Brand>
-        <img src={logo} alt='my logo' width='50px' />
+      <Navbar.Brand aria-controls='basic-navbar-nav'>
+        <LinkContainer to='/dashboard'>
+          <Nav.Link><img src={logo} alt='my logo' width='50px' /></Nav.Link>
+        </LinkContainer>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>

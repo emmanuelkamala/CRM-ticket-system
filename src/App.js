@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
-import DefaultLayout from './layout/DefaultLayout';
 import Ticket from './pages/ticket/Ticket';
 import AddTicket from './pages/add-ticket/AddTicket';
 import TicketLists from './pages/ticket-listing/TicketLists';
@@ -14,12 +13,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'><Login /></Route>
-        <DefaultLayout>
           <PrivateRoute path='/dashboard'><Dashboard /> </PrivateRoute>
           <PrivateRoute path='/add-ticket'><AddTicket /> </PrivateRoute>
           <PrivateRoute path='/tickets'><TicketLists /> </PrivateRoute>
           <PrivateRoute path='/ticket/:id'><Ticket /> </PrivateRoute>
-        </DefaultLayout>
         </Switch>
       </Router>
     </div>

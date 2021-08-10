@@ -7,7 +7,7 @@ const PasswordReset = ({handleChange, email, handleResetSubmit, formSwitcher }) 
     <Container>
       <Row>
         <Col>
-          <h1 className='text-info text-center mt-5'>Reset Password</h1>
+          <h1 className='text-success text-center mt-5'>Reset Password</h1>
           <hr/>
           <Form className="p-3" autoComplete="off" onSubmit={handleResetSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -22,7 +22,7 @@ const PasswordReset = ({handleChange, email, handleResetSubmit, formSwitcher }) 
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="success" type="submit">
               Reset Password
             </Button>
           </Form>
@@ -31,7 +31,9 @@ const PasswordReset = ({handleChange, email, handleResetSubmit, formSwitcher }) 
       </Row> 
       <Row className="mb-5">
         <Col>
-          <a href='#!' onClick={() => formSwitcher('login')}>Login Now?</a>
+          <a href='#!' onClick={() => formSwitcher('login')}>
+            <span className='text-success'>Login Now?</span>
+          </a>
         </Col>
       </Row>
     </Container>

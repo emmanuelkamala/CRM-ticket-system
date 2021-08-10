@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function TicketTable({tickets}) {
   return (
@@ -18,7 +19,11 @@ function TicketTable({tickets}) {
           tickets.length ?  (tickets.map((row, i) => 
             <tr key={i}>
               <td>{row.id}</td>
-              <td>{row.subject}</td>
+              <td>
+                <Link to='/ticket/:id'>
+                  {row.subject}
+                </Link>
+              </td>
               <td>{row.status}</td>
               <td>{row.addedAt}</td>
             </tr>

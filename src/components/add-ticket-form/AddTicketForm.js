@@ -3,9 +3,8 @@ import { Card, Form, Button, Col, Row } from 'react-bootstrap';
 import './add-ticket-form.css';
 
 function AddTicketForm({handleSubmit, handleChange, formData }) {
-  console.log(formData);
   return (
-    <Card className='mt-5 mb-10 add-ticket-form'>
+    <Card style={{width: '50rem'}} className='mt-5 mb-10 add-ticket-form'>
       <h1 className='text-success text-center mt-3'>Add New Ticket</h1>
       <hr />
       <Form className="p-3" autoComplete="off" onSubmit={handleSubmit}>

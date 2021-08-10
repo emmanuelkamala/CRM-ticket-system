@@ -23,7 +23,7 @@ function Ticket() {
   }
   return (
     <Container style={{ width: '60rem', margin: '0 auto'}}>
-      <Row>
+      <Row className='mt-3'>
         <Col>
           <PageBreadcrumb page="Ticket" />
         </Col>
