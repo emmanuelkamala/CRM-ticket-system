@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   return (
     <Container>
-      <Row>
+      <Row className='mt-3'>
         <Col>
           <PageBreadcrumb page='Dashboard' />
         </Col>

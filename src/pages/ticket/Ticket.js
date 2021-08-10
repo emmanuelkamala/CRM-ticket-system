@@ -6,13 +6,22 @@ import MessageHistory from '../../components/message-history/MessageHistory';
 import UpdateTicket from '../../components/update-ticket/UpdateTicket';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
-const ticket = tickets[0];
+import { useParams } from 'react-router-dom';
 
 function Ticket() {
-  const [message, setMessage] = useState('');
+  const {id} = useParams();
 
-  useEffect(() => {}, [message]);
+  const [message, setMessage] = useState('');
+  const [ticket, setTicket] = useState('');
+
+  useEffect(() => {
+    for(let i=0; i < tickets.length; i++) {
+      if(tickets[i].id == id) {
+        setTicket(tickets[i])
+        continue
+      }
+    }
+  }, [id, message]);
 
   const handleChange = e => {
     setMessage(e.target.value);
@@ -28,6 +37,7 @@ function Ticket() {
           <PageBreadcrumb page="Ticket" />
         </Col>
       </Row>
+      
       <Row>
         <Col className='text-secondary'>
           <div className='subject'><span className='fw-bold'>Subject :</span> {ticket.subject}</div>
@@ -40,7 +50,9 @@ function Ticket() {
       </Row>
       <Row className='mt-4'>
         <Col>
-          <MessageHistory msg={ticket.history} />
+        {
+          ticket.history && <MessageHistory msg={ticket.history} />
+        }
         </Col>
       </Row>
       <Row className='mt-4'>

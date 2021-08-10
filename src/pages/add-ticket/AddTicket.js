@@ -14,6 +14,7 @@ const initialFormData = {
 function AddTicket() {
   const [formData, setFormData] = useState(initialFormData);
   useEffect(()=> {}, [formData]);
+  
   const handleChange = e => {
     const {name, value} = e.target;
     setFormData({

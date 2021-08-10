@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const PasswordReset = ({handleChange, email, handleResetSubmit, formSwitcher }) => {
   return (
@@ -31,9 +32,13 @@ const PasswordReset = ({handleChange, email, handleResetSubmit, formSwitcher }) 
       </Row> 
       <Row className="mb-5">
         <Col>
-          <a href='#!' onClick={() => formSwitcher('login')}>
-            <span className='text-success'>Login Now?</span>
-          </a>
+          <Link 
+            to='#!' 
+            onClick={() => formSwitcher('login')} 
+            className='link-success text-decoration-none'
+          >
+            Login Now?
+          </Link>
         </Col>
       </Row>
     </Container>

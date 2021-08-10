@@ -20,7 +20,7 @@ function TicketTable({tickets}) {
             <tr key={i}>
               <td>{row.id}</td>
               <td>
-                <Link to='/ticket/:id'>
+                <Link to={`/ticket/${row.id}`} className='link-success text-decoration-none'>
                   {row.subject}
                 </Link>
               </td>

@@ -7,6 +7,7 @@ const isAuth = true;
 function PrivateRoute({children, ...rest}) {
   return (
     <Route
+      {...rest}
       render = {() => (isAuth?  <DefaultLayout>{children}</DefaultLayout> : <Redirect to='/' />) }  
     />
   )
