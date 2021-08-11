@@ -35,5 +35,6 @@ All the user API router follows /v1/ticket/
 Tokens API Resources
 All the user API router follows /v1/tokens
 
-#	Routers	Verbs	Progress	Is Private	Description
-1	/v1/tokens	GET	Done	No	Get a fresh access JWT
+|#	|Routers	|Verbs	|Progress	|Is Private	|Description|
+|---|---------|-------|---------|-----------|-----------|
+|1|/v1/tokens|	GET	|Done	|No	|Get a fresh access JWT|
