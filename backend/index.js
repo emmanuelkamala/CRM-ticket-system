@@ -11,7 +11,11 @@ app.use(helmet());
 app.use(cors());
 
 // Logger
-app.use(morgan());
+app.use(morgan('tiny'));
+
+// Set body parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 5000;
 
