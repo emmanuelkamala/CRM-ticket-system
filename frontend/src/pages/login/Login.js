@@ -30,10 +30,8 @@ const Login = () => {
 
   const handleResetSubmit = e => {
     e.preventDefault()
-
     console.log(email);
   }
-
 
   const formSwitcher = formType => {
     setFormLoad(formType)
@@ -64,8 +62,7 @@ const Login = () => {
             />
           )
         }
-        
-       
+
       </Card>
     </div>
   )
