@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import userRouter from './src/routers/user.js';
 import ticketRouter from './src/routers/ticket.js';
+import handleError from './src/utils/errorHandler.js';
 
 dotenv.config();
 const app = express();
@@ -27,10 +28,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/v1/user', userRouter);
 app.use('/v1/ticket', ticketRouter);
 
-app.use('*', (req, res) => {
-  res.json({message: "Resource not found"})
+app.use('*', (req, res, next) => {
+  const error = new Error("Resources not found");
+  error.status = 404;
+  next(error);
 })
 
+app.use((error, req, res, next) => {
+  handleError(error, res);
+})
 // Connect MongoDB
 
 mongoose.connect(process.env.MONGO_URI, {

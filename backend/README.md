@@ -1,5 +1,5 @@
 CRM Client side API
-This api is a part of create CRM Ticket system with MERN stack from scratch tutorial series. Link for the series is https://youtu.be/XWbEzWSKBfs
+This api is a part of create CRM Ticket system.
 
 How to use
 run git clone https://github.com/emmanuelkamala/backend.git
