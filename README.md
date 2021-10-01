@@ -1,9 +1,11 @@
 # CRM Ticket System
 It's an app like a help desk where clients(customers) can create tickets about the problems they are facing with a particular system. Administrators can then view the tickets created and start conversing with clients. 
 
-![screenshot](./frontend/public/images/)
-![screenshot](./frontend/public/images/)
-![screenshot](./frontend/public/images/)
+![screenshot](./frontend/public/images/1.png)
+![screenshot](./frontend/public/images/2.png)
+![screenshot](./frontend/public/images/3.png)
+![screenshot](./frontend/public/images/4.png)
+![screenshot](./frontend/public/images/5.png)
 
 # Live Demo
 Coming soon...
