@@ -36,15 +36,14 @@ app.use('*', (req, res) => {
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
 })
+.then(() => console.log(`MongoDB Connected and Server Running on Port: http://localhost:${PORT}`))
+.catch((error) => console.log(`${error} did not connect`));
 
-mongoose.connection.on('open', ()=>{ console.log('mongoDB is connected') });
-mongoose.connection.on('error', ()=>{ console.log(error) }); 
+// mongoose.connection.on('open', ()=>{ console.log('mongoDB is connected') });
+// mongoose.connection.on('error', (error)=>{ console.log(error) }); 
 
 
-// .then(() => app.listen(PORT, () => console.log(`MongoDB Connected and Server Running on Port: http://localhost:${PORT}`)))
-// .catch((error) => console.log(`${error} did not connect`));
+
 
 app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`))

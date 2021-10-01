@@ -29,7 +29,7 @@ const Login = () => {
   }
 
   const handleResetSubmit = e => {
-    e.preventDefault()
+    e.preventDefault();
     console.log(email);
   }
 
