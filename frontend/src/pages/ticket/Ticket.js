@@ -16,7 +16,7 @@ function Ticket() {
 
   useEffect(() => {
     for(let i=0; i < tickets.length; i++) {
-      if(tickets[i].id === id) {
+      if(tickets[i].id === parseInt(id)) {
         setTicket(tickets[i])
         continue
       }
