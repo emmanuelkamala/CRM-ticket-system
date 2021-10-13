@@ -42,6 +42,7 @@ app.use('*', (req, res, next) => {
 app.use((error, req, res, next) => {
   handleError(error, res);
 })
+
 // Connect MongoDB
 
 mongoose.connect(process.env.MONGO_URI, {
@@ -51,4 +52,4 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log(`MongoDB Connected and Server Running on Port: http://localhost:${PORT}`))
 .catch((error) => console.log(`${error} did not connect`));
 
-app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`));
