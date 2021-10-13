@@ -1,16 +1,20 @@
 import express from 'express';
-import { insertUser } from '../model/User.model.js';
+import User from '../model/User.js';
 const userRouter = express.Router();
 
-userRouter.all('/', (req, res, next) => {
+userRouter.get('/', (req, res, next) => {
   res.json({ message: 'returning from user Router' });
   next();
 })
 
 userRouter.post('/', async (req, res) => {
-  const result = await insertUser(req.body);
-  console.log(result);
-  res.json({ message: 'New user has been created', result });
+  try {
+    const newUser = new User(req.body);
+    const user = await newUser.save()
+    res.json({ message: 'New user created', user });
+  } catch (error) {
+    res.json({ status: error.status, message: error.message })
+  }
 })
 
 export default userRouter;
