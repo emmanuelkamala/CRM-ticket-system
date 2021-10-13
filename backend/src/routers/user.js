@@ -1,5 +1,6 @@
 import express from 'express';
 import User from '../model/User.js';
+import bcrypt from 'bcrypt';
 const userRouter = express.Router();
 
 userRouter.get('/', (req, res, next) => {
@@ -8,8 +9,18 @@ userRouter.get('/', (req, res, next) => {
 })
 
 userRouter.post('/', async (req, res) => {
+  const { name, company, address, phone, email, password } = req.body;
   try {
-    const newUser = new User(req.body);
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync(password, salt);
+    const newUser = new User({
+      name, 
+      company, 
+      address, 
+      phone, 
+      email,
+      password: hash,
+    });
     const user = await newUser.save()
     res.json({ message: 'New user created', user });
   } catch (error) {
