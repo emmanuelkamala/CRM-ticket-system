@@ -19,11 +19,16 @@ app.use(helmet());
 app.use(cors());
 
 // Logger
-app.use(morgan('tiny'));
+if (process.env.NODE_ENV !== 'production'){
+  app.use(morgan('tiny'));
+}
+
 
 // Set body parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Importing Routes
 
 app.use('/v1/user', userRouter);
 app.use('/v1/ticket', ticketRouter);
@@ -45,11 +50,5 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => console.log(`MongoDB Connected and Server Running on Port: http://localhost:${PORT}`))
 .catch((error) => console.log(`${error} did not connect`));
-
-// mongoose.connection.on('open', ()=>{ console.log('mongoDB is connected') });
-// mongoose.connection.on('error', (error)=>{ console.log(error) }); 
-
-
-
 
 app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`))
