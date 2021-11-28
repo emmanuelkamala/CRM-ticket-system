@@ -28,4 +28,13 @@ userRouter.post('/', async (req, res) => {
   }
 })
 
+userRouter.post('/login', async(req, res) => {
+  const { email, password } = req.body;
+  try {
+    
+  } catch (error) {
+    
+  }
+})
+
 export default userRouter;
